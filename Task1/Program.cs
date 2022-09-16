@@ -35,23 +35,29 @@
 
 int Input()
 {
-    int num = 0;
-while (Console.ReadLine() != "stop")
-{
-    num = Convert.ToInt32(Console.ReadLine());
-
-}
-return num;
-}
-
-int Count(int num)
-{
     int count = 0;
-    if(num > 0)
+    int num = 0;
+    bool check = true;
+    string str = String.Empty;
+while (str != "stop")
+{
+    str = Console.ReadLine();
+    
+    num = Convert.ToInt32(str);
+        if(num > 0)
+        {
+            count++;
+        }
+    
+    else
     {
-        count++;
+        check = false;
     }
-    return count;
+    
 }
-Count(Input());
+return count;
+}
+
+
+Input();
 
