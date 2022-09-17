@@ -6,58 +6,28 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-// int numberOfInputs()
-// {
-//     System.Console.WriteLine("Укажите какое количество чисел будет вводиться: ");
-//     int m = Convert.ToInt32(Console.ReadLine());
-
-//     return m;
-// }
-
-
-
-
-//numberOfInputs();
-
-
-// int numbersGreaterZero(int n)
-// {
-//     int count = 0;
-//     for (int i = 0; i < n; i++)
-//     {
-//         if (n > 0)
-//         {
-//             count++;
-//         }
-//     }
-//     return count;
-// }
-
 int Input()
 {
     int count = 0;
-    int num = 0;
-    bool check = true;
+    //int num = 0;
     string str = String.Empty;
-while (str != "stop")
+while (true)
 {
     str = Console.ReadLine();
-    
-    num = Convert.ToInt32(str);
-        if(num > 0)
+        if(str == "stop")
         {
-            count++;
+            break;
         }
     
-    else
-    {
-        check = false;
-    }
+        else if(Convert.ToInt32(str) > 0)
+        {
+        count++;
+        
+        }
     
 }
 return count;
 }
 
 
-Input();
-
+System.Console.WriteLine(Input());
